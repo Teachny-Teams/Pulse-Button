@@ -1,0 +1,50 @@
+* {
+  overflow-y: hidden;
+}
+.pulse:hover,
+.pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 1.25em rgba(#fff, 0);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+.pulse {
+  --color: #ef6eae;
+  --hover: #ef8f6e;
+}
+
+button {
+  cursor: pointer;
+  color: var(--color);
+  transition: 0.25s;
+  &:hover,
+  &:focus {
+    border-color: var(--hover);
+    color: #fff;
+  }
+}
+
+body {
+  color: #fff;
+  background: black;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
